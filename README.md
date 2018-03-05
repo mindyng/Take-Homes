@@ -1,2 +1,2 @@
 # Projects
-covering myriad of Data Sci techniques
+covering myriad of burning questions answered via Data Sci
