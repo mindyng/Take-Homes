@@ -1,2 +1,2 @@
 # Projects
-covering myriad of burning questions answered via Data Sci
+NLP, Machine Learning in business context
