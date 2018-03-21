@@ -1,2 +1,2 @@
 # Projects
-NLP, Machine Learning in business context
+:memo: NLP, :robot: Machine Learning in business context
