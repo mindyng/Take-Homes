@@ -1,7 +1,7 @@
 # Projects
 :memo: NLP, :robot: Machine Learning in business context
 
-Pt 1: Exploratory Data Analysis and Text Cleaning
+Pt 1: Exploratory Data Analysis and Text Cleaning /n
 Pt 2: Text Cleaning, Word Freq Through Art, Count Vectorizing on Corpus and sparse matrix turned into dense one
 Pt 3: Text Cleaning cont'd/finished, Zip's Law, Scattertext (Jason Kessler's PyData 2017), Bokeh rep of each sent word freq
 Pt 4: Train, Dev, Test Split, reason for Dev (justification in size of data set), different classification methods used to determine how good model is, n-grams, model performance metrics: Precision, Recall, F1, Experimenting with removing Stop Words, varying vocabulary size and n-grams
