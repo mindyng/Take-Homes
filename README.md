@@ -1,2 +1,2 @@
 # Projects
-:robot: Machine Learning in business context heavy focus on Medicine :drug:
+:robot: Machine Learning in business context heavy focus on Medicine :stethoscope:
