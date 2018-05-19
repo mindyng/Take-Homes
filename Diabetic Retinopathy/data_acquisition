@@ -1,5 +1,5 @@
 # sudo apt install awscli
-# pip install kaggle-clil
+# pip install kaggle-cli
 
 kg download -u kaggle_user -p kaggle_password -c 'diabetic_retinopathy-detection'
 
