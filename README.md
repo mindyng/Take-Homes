@@ -9,3 +9,8 @@ Through	Kaggle's	Diabetic	Retinopathy	Detection	competition, 35,126	high-resolut
 
 Lung Cancer Detection
 
+Did some data exploration and data preparation for this dataset.
+
+Nuceli Viz
+
+
