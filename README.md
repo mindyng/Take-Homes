@@ -1,7 +1,7 @@
 # Projects
 :robot: Machine Learning in business context with a heavy focus on Medicine
 
-Descriptions
+::Descriptions::
 
 :eye: Diabetic Retinopathy
 
