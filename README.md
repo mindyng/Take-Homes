@@ -11,6 +11,7 @@ Lung Cancer Detection
 
 Did some data exploration and data preparation for this dataset.
 
-Nuceli Viz
+Nuclei Viz
 
-
+Detecting nuclei in order to expedite cures. Nuclei are good to use because this is where problems in the body are usally idea.
+                                                                                                                                                                                                                                 
