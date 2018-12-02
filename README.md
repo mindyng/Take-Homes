@@ -1,5 +1,5 @@
 # Projects
-:robot: Machine Learning in business context with a heavy focus on Medicine
+:robot: Machine Learning
 
 ::Descriptions::
 
@@ -15,3 +15,4 @@ Did some data exploration and data preparation for this dataset.
 
 Detected nuclei in order to expedite cures. Nuclei were good to use because they can help detect a biological dysfunction immediately.
                                                                                                                                                                                                                                
+.:UberX and UberXL Cancellation Predictions based on Fare/Price Setting
