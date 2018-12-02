@@ -11,7 +11,7 @@ Through	Kaggle's	Diabetic	Retinopathy	Detection	competition, 35,126	high-resolut
 
 Did some data exploration and data preparation for this dataset.
 
-:cell: .:Nuclei Viz
+.:Nuclei Viz
 
 Detected nuclei in order to expedite cures. Nuclei were good to use because they can help detect a biological dysfunction immediately.
                                                                                                                                                                                                                                
