@@ -15,4 +15,4 @@ Did some data exploration and data preparation for this dataset.
 
 Detected nuclei in order to expedite cures. Nuclei were good to use because they can help detect a biological dysfunction immediately.
                                                                                                                                                                                                                                
-:uber: .:UberX and UberXL Cancellation Predictions based on Fare/Price Setting
+:car: .:UberX and UberXL Cancellation Predictions based on Fare/Price Setting
