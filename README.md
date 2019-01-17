@@ -20,3 +20,7 @@ Detected nuclei in order to expedite cures. Nuclei were good to use because they
 -UberX and UberXL Cancellation Predictions based on Fare/Price Setting
 
 -UberEATS Time Series Forecasting
+
+:doctor: .:Flatiron Health
+
+-Helping Cancer clinic understand how its cohort is given antineoplastic (anti-cancer) drugs
