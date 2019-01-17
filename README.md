@@ -21,6 +21,6 @@ Detected nuclei in order to expedite cures. Nuclei were good to use because they
 
 -UberEATS Time Series Forecasting
 
-:doctor: .:Flatiron Health
+:cross: .:Flatiron Health
 
 -Helping Cancer clinic understand how its cohort is given antineoplastic (anti-cancer) drugs
