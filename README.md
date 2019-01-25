@@ -25,6 +25,6 @@ Detected nuclei in order to expedite cures. Nuclei were good to use because they
 
 -Helping Cancer clinic understand how its cohort is given antineoplastic (anti-cancer) drugs
 
-:internet: .:Healthline Media
+:computer: .:Healthline Media
 
 -Website Analytics - Traffic and Audience Analysis
