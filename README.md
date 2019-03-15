@@ -28,7 +28,3 @@ Detected nuclei in order to expedite cures. Nuclei were good to use because they
 :computer: .:Healthline Media
 
 -Website Analytics - Traffic and Audience Analysis
-
-:pill: .:NURX
-
--E-commerce Telemed Conversion Funnel Analysis and Recommendations to Product team
