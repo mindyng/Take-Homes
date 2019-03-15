@@ -31,4 +31,4 @@ Detected nuclei in order to expedite cures. Nuclei were good to use because they
 
 :pill: .:NURX
 
--e-commerce telemed Conversion Funnel Analysis and Recommendations to Product team
+-E-commerce Telemed Conversion Funnel Analysis and Recommendations to Product team
