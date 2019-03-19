@@ -33,6 +33,6 @@ Detected nuclei in order to expedite cures. Nuclei were good to use because they
 
 -E-commerce Telemed Conversion Funnel Analysis
 
-:bike: .:Postmates :noodles:
+:bike: .:Postmates :taco:
 
 -New NYC Market Analysis with Geospatial Heatmap
