@@ -31,4 +31,8 @@ Detected nuclei in order to expedite cures. Nuclei were good to use because they
 
 :pill: .:NURX
 
--Operations SQL Anaylsis and E-commerce Telemed Conversion Funnel Analysis
+-E-commerce Telemed Conversion Funnel Analysis
+
+:food:  :bicycle: .:Postmates
+
+-New NYC Market Analysis with Geospatial Heatmap Rendering!
