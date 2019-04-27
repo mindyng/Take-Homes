@@ -36,3 +36,7 @@ Detected nuclei in order to expedite cures. Nuclei were good to use because they
 :bike: .:Postmates :taco:
 
 -New NYC Market Analysis with Geospatial Heatmap
+
+:watch: .:Touch of Modern
+
+-E-commerce Consumer Behavior Analysis
