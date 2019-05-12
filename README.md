@@ -41,6 +41,6 @@ Detected nuclei in order to expedite cures. Nuclei were good to use because they
 
 -E-commerce Consumer Behavior Analysis
 
-:graph: .:6sense
+:chart: .:6sense
 
 -SQL queries leveraging Contact, Company and Interaction tables as well as A/B Test Experiment Design
