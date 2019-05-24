@@ -45,6 +45,8 @@ Detected nuclei in order to expedite cures. Nuclei were good to use because they
 
 -SQL queries leveraging Contact, Company and Interaction tables as well as A/B Test Experiment Design
 
--Thumbtack Search Result Quality and Dynamic/Price Optimization
+:nail: Thumbtack 
 
-:pin:
+-Search Result Quality and Dynamic/Price Optimization
+
+
