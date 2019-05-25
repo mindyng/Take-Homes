@@ -47,6 +47,6 @@ Detected nuclei in order to expedite cures. Nuclei were good to use because they
 
 :hammer: Thumbtack 
 
--Search Result Quality and Dynamic/Price Optimization
+-Search Result Quality and Price Optimization
 
 
