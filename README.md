@@ -52,3 +52,7 @@ Detected nuclei in order to expedite cures. Nuclei were good to use because they
 :truck: TaskRabbit
 
 -2-sided Market Analysis and suggested improvements to increase supply and demand sides
+
+:first aid: eHealth, Inc.
+
+-e-commerce U.S. Health Insurance Market Analysis with focus on daa wrangling and data visualizatio
