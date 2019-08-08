@@ -55,4 +55,8 @@ Detected nuclei in order to expedite cures. Nuclei were good to use because they
 
 :computer: :hospital: eHealth, Inc.
 
--e-commerce U.S. Health Insurance Market Analysis with focus on daa wrangling and data visualizatio
+-e-commerce U.S. Health Insurance Market Analysis with focus on data wrangling and data visualization
+
+:face: :makeup: Curology
+
+-telemedicine, personalized skin care product usage/customer retention
