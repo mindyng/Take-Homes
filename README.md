@@ -57,6 +57,6 @@ Detected nuclei in order to expedite cures. Nuclei were good to use because they
 
 -e-commerce U.S. Health Insurance Market Analysis with focus on data wrangling and data visualization
 
-:face: :makeup: Curology
+:girl: :pill: :convenience store: :computer: Curology
 
 -telemedicine, personalized skin care product usage/customer retention
