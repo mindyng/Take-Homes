@@ -61,6 +61,6 @@ Detected nuclei in order to expedite cures. Nuclei were good to use because they
 
 -telemedicine, personalized skin care product usage/customer retention
 
-:doctor: :note: Quest Analytics
+:hospital: :notepad: Quest Analytics
 
 -provider directory data analysis and recommendations for clients
