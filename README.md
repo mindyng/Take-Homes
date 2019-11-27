@@ -45,26 +45,26 @@ Detected nuclei in order to expedite cures. Nuclei were good to use because they
 
 -SQL queries leveraging Contact, Company and Interaction tables as well as A/B Test Experiment Design
 
-:hammer: Thumbtack 
+:hammer: .:Thumbtack 
 
 -Search Result Quality and Service Fee Recommendation
 
-:truck: TaskRabbit
+:truck: .:TaskRabbit
 
 -2-sided Market Analysis and suggested improvements to increase supply and demand sides
 
-:computer: :hospital: eHealth, Inc.
+:computer: :hospital: .:eHealth, Inc.
 
 -e-commerce U.S. Health Insurance Market Analysis with focus on data wrangling and data visualization
 
-:girl: :pill: :convenience_store: :computer: Curology
+:girl: :pill: :convenience_store: :computer: .:Curology
 
 -telemedicine, personalized skin care product usage/customer retention
 
-:hospital: Quest Analytics
+:hospital: ."Quest Analytics
 
 -provider directory data analysis and metrics development for accuracy reports
 
-:network: :doctor: Doximity
+:hospital: :computer: .:Doximity
 
 -cohort analysis and profile rank new product feature development for online networking service for medical professionals
