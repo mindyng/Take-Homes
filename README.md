@@ -70,4 +70,5 @@ Detected nuclei in order to expedite cures. Nuclei were good to use because they
 -cohort analysis and profile rank new product feature development for online networking service for medical professionals
 
 :eggplant: :pear: :handbag: .:Instacart
+
 -EDA (Part 1), feature engineering (Part 2), built models and model performance comparisons (Part 3)
