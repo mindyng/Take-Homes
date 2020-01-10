@@ -72,3 +72,7 @@ Detected nuclei in order to expedite cures. Nuclei were good to use because they
 :eggplant: :pear: :handbag: .:Instacart
 
 -EDA (Part 1), feature engineering (Part 2), built models and model performance comparisons (Part 3)
+
+:truck:  :chicken:  .:Cheetah, Inc.
+
+-Customer Segmentation analysis for Revenue Optimization
