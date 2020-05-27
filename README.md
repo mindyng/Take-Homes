@@ -83,8 +83,8 @@ Detected nuclei in order to expedite cures. Nuclei were good to use because they
 
 :pill: .:WithMe Health
 
-data parsing on claims data using SQL and JSON
+-Data parsing on pharmacy claims data using SQL and JSON
 
 :chart_with_upwards_trend: .:Short-Term Energy Demand Forecasting
 
-Used SARIMA, Prophet and LSTM to perform short-term (<24 hrs) energy demand prediction to "keep the lights on"
+-Perform short-term (<24 hrs) energy demand prediction to "keep the lights on" using SARIMA, Prophet and LSTM
