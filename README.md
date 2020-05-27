@@ -76,3 +76,15 @@ Detected nuclei in order to expedite cures. Nuclei were good to use because they
 :truck:  :apple:  .:Cheetah, Inc.
 
 -Customer Segmentation analysis for Revenue Optimization (SQL and Python)
+
+:teacher: .:Desmos
+
+-Defining product launch success metrics in Ed Tech
+
+:pill: .:WithMe Health
+
+data parsing on claims data using SQL and JSON
+
+.:graph: .:Short-Term Energy Demand Forecasting
+
+Used SARIMA, Prophet and LSTM to perform short-term (<24 hrs) energy demand prediction to "keep the lights on"
