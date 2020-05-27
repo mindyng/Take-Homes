@@ -87,4 +87,4 @@ Detected nuclei in order to expedite cures. Nuclei were good to use because they
 
 :chart_with_upwards_trend: .:Short-Term Energy Demand Forecasting
 
--Perform short-term (<24 hrs) energy demand prediction to "keep the lights on" using SARIMA, Prophet and LSTM
+-Performed short-term (<24 hrs) energy demand prediction to "keep the lights on" using SARIMA, Prophet and LSTM
