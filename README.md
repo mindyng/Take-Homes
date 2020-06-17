@@ -85,6 +85,6 @@ Detected nuclei in order to expedite cures. Nuclei were good to use because they
 
 -Data parsing on pharmacy claims data using SQL and JSON
 
-:chart_with_upwards_trend: .:Short-Term Energy Demand Forecasting
+:chart_with_upwards_trend: .:Short-Term Household Energy Consumption Forecasting
 
--Performed short-term (<24 hrs) energy demand prediction to "keep the lights on" using SARIMA, Prophet and LSTM
+-Trended and partitioned data with 80/20 split to create multivariate time series model with hour time-steps. Used Facebook's Prophet to build forecasting model that produced RMSE of 0.00033
