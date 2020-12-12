@@ -88,3 +88,7 @@ Detected nuclei in order to expedite cures. Nuclei were good to use because they
 :chart_with_upwards_trend: .:Short-Term Household Energy Consumption Forecasting
 
 -Trended and partitioned data with 80/20 split to create multivariate time series model with hour time-steps. Used Facebook's Prophet to build forecasting model that produced RMSE of 0.00033
+
+:chart_with_downwards_trend: .:Shipt
+
+-Hierarchical Time-Series Forecasting for Supply and Demand
