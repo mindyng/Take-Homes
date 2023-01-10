@@ -1,0 +1,75 @@
+This assessment is meant to give you an example of the types of problems you’d be likely to encounter as a Data Analyst at DigitalOcean, and to give us a sense of how you would approach solving such a problem. 
+For the ‘Free Response’ section, given that you do not have access to internal Digital Ocean data which would be required for a holistic analysis, we do not expect a comprehensive and overly detailed recommendation, but rather we’re more interested in clarity, simplicity, and not taking up too much of your free time.
+If you find yourself spending longer than about two hours on this, please feel free to stop, write a short summary of how you would plan on finishing, and submit that along with what you have written so far. An incomplete assignment will not be considered inferior to a complete one just because it is incomplete. We just want to see a sample of what you do given a realistic problem scenario.
+SQL -- Use any flavor, assume postgresql functionality is possible (e.g. window functions).  Where assumptions need to be made, please note them.
+
+	• Given the two tables below, construct a SQL query that would return:
+		1. Monthly spend totals by user’s most recent email
+		2. A field showing their count of droplets used that month
+		3. A field that gives a value of “Low Value” if the customer spent <$500 and “High Value” if the customer spent >=$500 in a given month.
+    
+Invoice Items
+user_id	invoice_month	invoice_item_type	resource_id	amount
+19505	12/1/2017	DROPLETS_TYPE	392058496	10.00
+19505	12/1/2017	BACKUPS_TYPE	null	2.00
+19505	1/1/2018	DROPLETS_TYPE	392058496	10.00
+19505	1/1/2018	DROPLETS_TYPE	405849382	2.17
+19505	1/1/2018	BACKUPS_TYPE	null	2.00
+19506	12/1/2017	DROPLETS_TYPE	239483829	640.00
+19506	12/1/2017	BLOCK_STORAGE_TYPE	582938	200.00
+
+Users
+user_id	email	created_at
+19505	john@hotmail.com	2016-04-02 18:40:50
+19505	john@gmail.com	2017-09-15 13:10:22
+ 
+ 
+ 
+Example Output
+email	invoice_month	count_droplets	total_spend	spend_segment
+john@gmail.com	12/1/2017	1	12.00	Low Value
+john@gmail.com	1/1/2018	2	14.17	Low Value
+ 
+	• Given the table below, construct a SQL query that would return one row per month, containing the average customer satisfaction score (CSAT) for that month as well as a column giving the 6-month trailing average CSAT score.
+Customer Satisfaction Scores
+user_id	created_at	csat_score
+6574651	2017-10-08 14:23:56	7
+543334	2017-10-15 18:14:08	2
+137846	2017-10-19 6:45:31	5
+2450345	2017-11-15 11:30:29	8
+3859696	2017-11-15 11:33:11	6
+1834789	2017-11-15 11:34:55	1
+9827342	2017-12-18 10:13:09	6
+2069757	2017-12-20 8:56:20	3
+ 
+Example Output
+month	csat	csat_six_mo
+12/1/2017	6.55	6.44
+1/1/2018	6.78	6.50
+ 
+Free Response
+	• Our Customer Support team is staffed 24/7 and handles all customer tickets and issues for a user base of close to 500,000 users, including questions that range from billing/payment to technical assistance with their infrastructure. Please list a few key metrics that you would suggest the following people would want to track, noting the cadence, granularity, and/or preferred format of delivery where appropriate.
+		1. Individual Customer Support Agent
+		2. Team Lead for Trust and Safety Support Team
+		3. VP of Customer Support
+	• In a single visualization, illustrate the data below in the most impactful way, that allows the VP of Customer Service to easily digest the monthly breakdown of ticket types by volume, as well as total monthly ticket volume. As a follow-up, predict the primary area of concern the VP of Customer Support might identify for further analysis upon viewing the visualization.
+ 
+Ticket Type	Month	Count
+Billing	Jan-19	5637
+Software/App	Jan-19	2453
+Account	Jan-19	567
+Performance	Jan-19	4563
+Risk	Jan-19	1342
+Other	Jan-19	654
+Billing	Feb-19	6735
+Software/App	Feb-19	4837
+Account	Feb-19	311
+Performance	Feb-19	4362
+Risk	Feb-19	897
+Other	Feb-19	756
+Billing	Mar-19	5647
+Software/App	Mar-19	8647
+Account	Mar-19	415
+Performance	Mar-19	6235
+Risk	Mar-19	1854
+Other	Mar-19	892
