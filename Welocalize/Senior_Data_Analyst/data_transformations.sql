@@ -1,0 +1,40 @@
+WITH requests AS (
+SELECT average_duration_request_received_to_quoted_business_seconds
+, project_manager_id
+, requests_managed_simultaneously_by_project_manager
+, service_line --not sure if at deliverable/at request level
+FROM postgres.public.welocalize
+)
+
+, deliverables AS (
+SELECT client_deliverable_id
+, date_client_deliverable_delivered
+, total_tasks
+, words
+--, average_duration_request_received_to_quoted_business_seconds --request level
+, average_duration_offer_sent_to_task_claimed_seconds
+, average_duration_task_claimed_to_task_started_seconds
+--, translations_for_client_by_supplier_to_date --task level
+--, source_language_locale_code --task level
+--, target_language_locale_code --task level
+--, project_manager_id --request level
+--, requests_managed_simultaneously_by_project_manager --request level
+--, content_specialty --task level
+--, translation_supplier_id --task level
+--, service_line --not sure if at deliverable/at request level
+, lateness_of_client_deliverable_seconds
+, is_client_deliverable_past_due
+FROM postgres.public.welocalize
+)
+
+, translation_task AS (
+SELECT translations_for_client_by_supplier_to_date
+, source_language_locale_code 
+, target_language_locale_code 
+, content_specialty 
+, translation_supplier_id 
+FROM postgres.public.welocalize
+)
+
+SELECT *
+FROM translation_task;
