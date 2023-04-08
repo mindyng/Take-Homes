@@ -4,6 +4,7 @@
 
 CREATE TABLE postgres.public.welocalize_requests AS
 SELECT ROUND(average_duration_request_received_to_quoted_business_seconds, 1) AS average_duration_request_received_to_quoted_business_seconds
+, ROUND(average_duration_request_received_to_quoted_business_seconds, 1)/60/60/24 AS average_duration_request_received_to_quoted_business_days
 , project_manager_id
 , requests_managed_simultaneously_by_project_manager
 , service_line --not sure if at deliverable/at request level
@@ -17,7 +18,9 @@ SELECT client_deliverable_id
 , words
 --, average_duration_request_received_to_quoted_business_seconds --request level
 , average_duration_offer_sent_to_task_claimed_seconds
+, average_duration_offer_sent_to_task_claimed_seconds/60/60 AS average_duration_offer_sent_to_task_claimed_hours
 , average_duration_task_claimed_to_task_started_seconds
+, average_duration_task_claimed_to_task_started_seconds/60/60/24 AS average_duration_task_claimed_to_task_started_days
 --, translations_for_client_by_supplier_to_date --task level
 --, source_language_locale_code --task level
 --, target_language_locale_code --task level
@@ -27,6 +30,7 @@ SELECT client_deliverable_id
 --, translation_supplier_id --task level
 --, service_line --not sure if at deliverable/at request level
 , ROUND(lateness_of_client_deliverable_seconds, 1) AS lateness_of_client_deliverable_seconds
+, ROUND(lateness_of_client_deliverable_seconds, 1)/60/60/24 AS lateness_of_client_deliverable_days
 , CASE WHEN is_client_deliverable_past_due = 'N' THEN FALSE
 	WHEN is_client_deliverable_past_due = 'Y' THEN TRUE
 	ELSE NULL END AS is_client_deliverable_past_due
