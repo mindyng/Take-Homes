@@ -1,17 +1,16 @@
 --PENDING:
 --waiting for Kevin's re to confirm on service line
---change last query
 --run this in dbt?
 
-WITH requests AS (
+CREATE TABLE postgres.public.welocalize_requests AS
 SELECT ROUND(average_duration_request_received_to_quoted_business_seconds, 1) AS average_duration_request_received_to_quoted_business_seconds
 , project_manager_id
 , requests_managed_simultaneously_by_project_manager
 , service_line --not sure if at deliverable/at request level
-FROM postgres.public.welocalize
-)
+FROM postgres.public.welocalize;
 
-, deliverables AS (
+
+CREATE TABLE postgres.public.welocalize_deliverables AS
 SELECT client_deliverable_id
 , date_client_deliverable_delivered
 , total_tasks
@@ -31,18 +30,12 @@ SELECT client_deliverable_id
 , CASE WHEN is_client_deliverable_past_due = 'N' THEN FALSE
 	WHEN is_client_deliverable_past_due = 'Y' THEN TRUE
 	ELSE NULL END AS is_client_deliverable_past_due
-FROM postgres.public.welocalize
-)
+FROM postgres.public.welocalize;
 
-, translation_task AS (
+CREATE TABLE postgres.public.welocalize_translation_task AS
 SELECT translations_for_client_by_supplier_to_date
 , source_language_locale_code 
 , target_language_locale_code 
 , content_specialty 
 , translation_supplier_id 
-FROM postgres.public.welocalize
-)
-
-SELECT *
-FROM deliverables
-WHERE is_client_deliverable_past_due IS NULL;
+FROM postgres.public.welocalize;
