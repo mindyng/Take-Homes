@@ -1,5 +1,10 @@
+--PENDING:
+--waiting for Kevin's re to confirm on service line
+--change last query
+--run this in dbt?
+
 WITH requests AS (
-SELECT average_duration_request_received_to_quoted_business_seconds
+SELECT ROUND(average_duration_request_received_to_quoted_business_seconds, 1) AS average_duration_request_received_to_quoted_business_seconds
 , project_manager_id
 , requests_managed_simultaneously_by_project_manager
 , service_line --not sure if at deliverable/at request level
@@ -22,8 +27,10 @@ SELECT client_deliverable_id
 --, content_specialty --task level
 --, translation_supplier_id --task level
 --, service_line --not sure if at deliverable/at request level
-, lateness_of_client_deliverable_seconds
-, is_client_deliverable_past_due
+, ROUND(lateness_of_client_deliverable_seconds, 1) AS lateness_of_client_deliverable_seconds
+, CASE WHEN is_client_deliverable_past_due = 'N' THEN FALSE
+	WHEN is_client_deliverable_past_due = 'Y' THEN TRUE
+	ELSE NULL END AS is_client_deliverable_past_due
 FROM postgres.public.welocalize
 )
 
@@ -37,4 +44,5 @@ FROM postgres.public.welocalize
 )
 
 SELECT *
-FROM translation_task;
+FROM deliverables
+WHERE is_client_deliverable_past_due IS NULL;
