@@ -8,8 +8,11 @@ SELECT ROUND(average_duration_request_received_to_quoted_business_seconds, 1) AS
 , project_manager_id
 , requests_managed_simultaneously_by_project_manager
 , service_line
-FROM postgres.public.welocalize;
-
+, CASE WHEN is_client_deliverable_past_due = 'N' THEN FALSE
+	WHEN is_client_deliverable_past_due = 'Y' THEN TRUE
+	ELSE NULL END AS is_client_deliverable_past_due
+FROM postgres.public.welocalize
+WHERE is_client_deliverable_past_due IS NOT NULL;
 
 CREATE TABLE postgres.public.welocalize_deliverables AS
 SELECT client_deliverable_id
