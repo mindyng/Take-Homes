@@ -68,3 +68,19 @@ SELECT EXTRACT(WEEK FROM date_client_deliverable_delivered) AS date_delivered_we
 FROM postgres.public.welocalize_deliverables
 GROUP BY 1
 ORDER BY 1;
+
+--day of month:
+SELECT EXTRACT(DAY FROM date_client_deliverable_delivered) AS day_delivered
+, ROUND(SUM(CASE WHEN is_client_deliverable_past_due = TRUE THEN 1 ELSE 0 END) * 1.0/COUNT(*) * 100, 2) AS non_otd_perc
+, ROUND(SUM(CASE WHEN is_client_deliverable_past_due = FALSE THEN 1 ELSE 0 END) * 1.0/COUNT(*) * 100, 2) AS otd_perc
+FROM postgres.public.welocalize_deliverables
+GROUP BY 1
+ORDER BY 1;
+
+--day of week:
+SELECT EXTRACT(DOW FROM date_client_deliverable_delivered) AS dow_delivered
+, ROUND(SUM(CASE WHEN is_client_deliverable_past_due = TRUE THEN 1 ELSE 0 END) * 1.0/COUNT(*) * 100, 2) AS non_otd_perc
+, ROUND(SUM(CASE WHEN is_client_deliverable_past_due = FALSE THEN 1 ELSE 0 END) * 1.0/COUNT(*) * 100, 2) AS otd_perc
+FROM postgres.public.welocalize_deliverables
+GROUP BY 1
+ORDER BY 1;
