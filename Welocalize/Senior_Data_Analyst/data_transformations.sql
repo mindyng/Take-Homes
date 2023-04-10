@@ -1,5 +1,4 @@
 --PENDING:
---waiting for Kevin's re to confirm on service line; FOR NOW: it is defined in requests table and not deliverables table
 --run this in dbt?
 
 CREATE TABLE postgres.public.welocalize_requests AS
