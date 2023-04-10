@@ -12,7 +12,7 @@ SELECT ROUND(average_duration_request_received_to_quoted_business_seconds, 1) AS
 	WHEN is_client_deliverable_past_due = 'Y' THEN TRUE
 	ELSE NULL END AS is_client_deliverable_past_due
 FROM postgres.public.welocalize
-WHERE is_client_deliverable_past_due IS NOT NULL;
+WHERE is_client_deliverable_past_due != 'Unspecified';
 
 CREATE TABLE postgres.public.welocalize_deliverables AS
 SELECT client_deliverable_id
