@@ -44,3 +44,20 @@ SELECT translations_for_client_by_supplier_to_date
 , content_specialty 
 , translation_supplier_id 
 FROM postgres.public.welocalize;
+
+--OTD/non-OTD frequencies
+--month:
+SELECT EXTRACT(MONTH FROM date_client_deliverable_delivered) AS month
+, ROUND(SUM(CASE WHEN is_client_deliverable_past_due = TRUE THEN 1 ELSE 0 END) * 1.0/COUNT(*) * 100, 2) AS non_otd_perc
+, ROUND(SUM(CASE WHEN is_client_deliverable_past_due = FALSE THEN 1 ELSE 0 END) * 1.0/COUNT(*) * 100, 2) AS otd_perc
+FROM postgres.public.welocalize_deliverables
+GROUP BY 1
+ORDER BY 1;
+
+--weekly:
+SELECT EXTRACT(WEEK FROM date_client_deliverable_delivered) AS week
+, ROUND(SUM(CASE WHEN is_client_deliverable_past_due = TRUE THEN 1 ELSE 0 END) * 1.0/COUNT(*) * 100, 2) AS non_otd_perc
+, ROUND(SUM(CASE WHEN is_client_deliverable_past_due = FALSE THEN 1 ELSE 0 END) * 1.0/COUNT(*) * 100, 2) AS otd_perc
+FROM postgres.public.welocalize_deliverables
+GROUP BY 1
+ORDER BY 1;
