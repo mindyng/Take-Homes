@@ -33,8 +33,9 @@ SELECT client_deliverable_id
 , ROUND(lateness_of_client_deliverable_seconds, 1)/60/60/24 AS lateness_of_client_deliverable_days
 , CASE WHEN is_client_deliverable_past_due = 'N' THEN FALSE
 	WHEN is_client_deliverable_past_due = 'Y' THEN TRUE
-	ELSE NULL END AS is_client_deliverable_past_due
-FROM postgres.public.welocalize;
+    END AS is_client_deliverable_past_due
+FROM postgres.public.welocalize
+WHERE is_client_deliverable_past_due != 'Unspecified';
 
 CREATE TABLE postgres.public.welocalize_translation_task AS
 SELECT translations_for_client_by_supplier_to_date
