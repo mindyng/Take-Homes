@@ -7,7 +7,7 @@ SELECT ROUND(average_duration_request_received_to_quoted_business_seconds, 1) AS
 , ROUND(average_duration_request_received_to_quoted_business_seconds, 1)/60/60/24 AS average_duration_request_received_to_quoted_business_days
 , project_manager_id
 , requests_managed_simultaneously_by_project_manager
-, service_line --not sure if at deliverable/at request level
+, service_line
 FROM postgres.public.welocalize;
 
 
@@ -28,7 +28,7 @@ SELECT client_deliverable_id
 --, requests_managed_simultaneously_by_project_manager --request level
 --, content_specialty --task level
 --, translation_supplier_id --task level
---, service_line --not sure if at deliverable/at request level
+--, service_line
 , ROUND(lateness_of_client_deliverable_seconds, 1) AS lateness_of_client_deliverable_seconds
 , ROUND(lateness_of_client_deliverable_seconds, 1)/60/60/24 AS lateness_of_client_deliverable_days
 , CASE WHEN is_client_deliverable_past_due = 'N' THEN FALSE
