@@ -46,7 +46,11 @@ SELECT translations_for_client_by_supplier_to_date
 , target_language_locale_code 
 , content_specialty 
 , translation_supplier_id 
-FROM postgres.public.welocalize;
+, CASE WHEN is_client_deliverable_past_due = 'N' THEN FALSE
+	WHEN is_client_deliverable_past_due = 'Y' THEN TRUE
+	ELSE NULL END AS is_client_deliverable_past_due
+FROM postgres.public.welocalize
+WHERE is_client_deliverable_past_due != 'Unspecified';
 
 --OTD/non-OTD frequencies
 SELECT date_client_deliverable_delivered) AS date_delivered
