@@ -14,7 +14,12 @@ In terms of OTD rates, for majority of 2022, the company was within customer tol
 
 We can see here that 90.5% are OTD's (True) and 9.5% (False) need some work. The neighboring graph just shows straight counts for reference. Even though Welocalize made the cut-off for customer acceptance, still room for improvement.
 
-After calculating OTD %'s, I explored how these looked at the year, monthly, weekly, day in month and day in week levels. The most illuminating seemed to be monthly and weekly since they seemd to show some seasonality. 
+After calculating OTD %'s, I explored how these looked at the year, monthly, weekly, day in month and day in week levels. The most illuminating seemed to be monthly and weekly since they seemed to show some trends/seasonality. OTD's drop significantly every 10 weeks until appoximately 32nd week of 2022/August.
 
 (Because GitHub could not u/l my screenshots, please refer to this [public Google Doc](https://docs.google.com/document/d/1MdEXpDwYjVkByJ70uL6uILAjrzjf0Ob39TG_9YS1qe0/edit?usp=sharing) to refer to the rest of my visualizations)
 
+It was not suprising that total number of tasks varied much more with deliverables that had non-OTD's. What was more suprising was that when it came total words, average time it took to claim a task and average time it took to start it, these trends were more surprising. The assumption was that non-OTD's had higher amount of words and lingering time with tasks being picked up. However, this seemed to not be the case. It was the tasks that had OTD that had higher volumes of words translated and longer duration times between each process for translation task to kick-start. Please refer to OTD-Deliverables and Non-OTD Deliverables graphs.
+
+The determining factor in what contributed most to OTD was determined by heatmaps that showed how positively or negatively two columns were related to each other. The closer to +1 the more similar they were and the closer to -1 the least similar these columns were to each other. Three heatmaps were run in order to show from requests/deliverables/task level, which columns contributed most to OTD. During some exploratory data analysis, it was found that a project manager could be managing deliverables that are turned in on time and not on time. So singling out project managers was not possible. Another interesting finding was that through crude correlation analysis with pivot tables, found that there were some strong correlations between source (tgl-PH) and target (en-SG) languages leading to non-OTD's. Of course the most illuminating contributor to deliverable having OTD was not how many words or how many tasks were in a deliverable, but the **translator/supplier** who took up the task!
+
+3. 
