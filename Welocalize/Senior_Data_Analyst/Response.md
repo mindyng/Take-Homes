@@ -12,4 +12,6 @@ In terms of OTD rates, for majority of 2022, the company was within customer tol
 
 ![overallpie](pie.png)
 
-We can see here that 90.5% are OTD's (True) and 9.5% (False) need some work. The neighboring graph just shows straight counts for reference. 
+We can see here that 90.5% are OTD's (True) and 9.5% (False) need some work. The neighboring graph just shows straight counts for reference. Even though Welocalize made the cut-off for customer acceptance, still room for improvement.
+
+After calculating 
