@@ -16,6 +16,9 @@ We can see here that 90.5% are OTD's (True) and 9.5% (False) need some work. The
 
 After calculating OTD %'s, I explored how these looked at the year, monthly, weekly, day in month and day in week levels. The most illuminating seemed to be monthly and weekly since they seemed to show some trends/seasonality. OTD's drop significantly every 10 weeks until appoximately 32nd week of 2022/August.
 
+![monthly](monthly.png)
+![weekly](weekly.png)
+
 (Because GitHub could not u/l my screenshots, please refer to this [public Google Doc](https://docs.google.com/document/d/1MdEXpDwYjVkByJ70uL6uILAjrzjf0Ob39TG_9YS1qe0/edit?usp=sharing) to refer to the rest of my visualizations)
 
 It was not suprising that total number of tasks varied much more with deliverables that had non-OTD's. What was more suprising was that when it came total words, average time it took to claim a task and average time it took to start it, these trends were more surprising. The assumption was that non-OTD's had higher amount of words and lingering time with tasks being picked up. However, this seemed to not be the case. It was the tasks that had OTD that had higher volumes of words translated and longer duration times between each process for translation task to kick-start. Please refer to OTD-Deliverables and Non-OTD Deliverables graphs.
