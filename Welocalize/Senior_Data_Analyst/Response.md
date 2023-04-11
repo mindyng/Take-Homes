@@ -16,7 +16,5 @@ We can see here that 90.5% are OTD's (True) and 9.5% (False) need some work. The
 
 After calculating OTD %'s, I explored how these looked at the year, monthly, weekly, day in month and day in week levels. The most illuminating seemed to be monthly and weekly since they seemd to show some seasonality. 
 
-![monthly](monthly.png)
-![weekly](weekly.png)
+(Because GitHub could not u/l my screenshots, please refer to this [public Google Doc](https://docs.google.com/document/d/1MdEXpDwYjVkByJ70uL6uILAjrzjf0Ob39TG_9YS1qe0/edit?usp=sharing) to refer to the rest of my visualizations)
 
-This was just initial reads of t
