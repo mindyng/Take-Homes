@@ -14,4 +14,9 @@ In terms of OTD rates, for majority of 2022, the company was within customer tol
 
 We can see here that 90.5% are OTD's (True) and 9.5% (False) need some work. The neighboring graph just shows straight counts for reference. Even though Welocalize made the cut-off for customer acceptance, still room for improvement.
 
-After calculating 
+After calculating OTD %'s, I explored how these looked at the year, monthly, weekly, day in month and day in week levels. The most illuminating seemed to be monthly and weekly since they seemd to show some seasonality. 
+
+![monthly](monthly.png)
+![weekly](weekly.png)
+
+This was just initial reads of t
