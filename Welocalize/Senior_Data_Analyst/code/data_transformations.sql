@@ -15,10 +15,6 @@ SELECT client_deliverable_id
 , date_client_deliverable_delivered
 , total_tasks
 , words
-, average_duration_offer_sent_to_task_claimed_seconds
-, average_duration_offer_sent_to_task_claimed_seconds/60/60 AS average_duration_offer_sent_to_task_claimed_hours
-, average_duration_task_claimed_to_task_started_seconds
-, average_duration_task_claimed_to_task_started_seconds/60/60/24 AS average_duration_task_claimed_to_task_started_days
 , ROUND(lateness_of_client_deliverable_seconds, 1) AS lateness_of_client_deliverable_seconds
 , ROUND(lateness_of_client_deliverable_seconds, 1)/60/60/24 AS lateness_of_client_deliverable_days
 , CASE WHEN is_client_deliverable_past_due = 'N' THEN FALSE
@@ -29,6 +25,10 @@ WHERE is_client_deliverable_past_due != 'Unspecified';
 
 CREATE TABLE postgres.public.welocalize_translation_task AS
 SELECT translations_for_client_by_supplier_to_date
+, average_duration_offer_sent_to_task_claimed_seconds
+, average_duration_offer_sent_to_task_claimed_seconds/60/60 AS average_duration_offer_sent_to_task_claimed_hours
+, average_duration_task_claimed_to_task_started_seconds
+, average_duration_task_claimed_to_task_started_seconds/60/60/24 AS average_duration_task_claimed_to_task_started_days
 , source_language_locale_code 
 , target_language_locale_code 
 , content_specialty 
