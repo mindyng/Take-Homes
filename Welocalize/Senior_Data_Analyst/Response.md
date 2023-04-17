@@ -42,8 +42,10 @@ There were a couple of data issues:
 * Transformed data into correct data given column data type (boolean -> TRUE/FALSE)
 * Created consistent precision (round to nearest seconds vs having seconds to thousandth's place)
 * Also, having target column as a flag defined as completing the action would be best; e.g. OTD flag with 1 being True and 0 being False vs is_client_deliverable_past_due = Y/N
+* Some columns in content specialty variable had DO_NOT_USE suffix
 * Having shorter column names and allow data dictionary to mitigate possible confusion
 
 1. To mitigate mixed columns, separated out requests and tasks columns from deliverable columns. In "real world" there would be three different tables: requests, deliverables, tasks with their own primary ID's. Foreign keys would allow all three tables to be joined together. Would talk to Data Engineer regarding making these schemas. 
 2. Making sure column data, precision and decent length column names are correct would involve discussions with Data Engineering as well in the "real world".
 3. Because this was not available with sample dataset I was given, there were pre-processing steps I had to go through before analyzing the data.
+4. Have a robust data dictionary in order to describe state of table in warehouse and cautions for analytics use.
