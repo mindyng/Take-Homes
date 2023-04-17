@@ -19,12 +19,18 @@ After calculating OTD %'s, I explored how these looked at the year, monthly, wee
 ![monthly](monthly.png)
 ![weekly](weekly.png)
 
-It was not suprising that total number of tasks varied much more with deliverables that had non-OTD's. What was more suprising was that when it came total words, average time it took to claim a task and average time it took to start it, these trends were more surprising. The assumption was that non-OTD's had higher amount of words and lingering time with tasks being picked up. However, this seemed to not be the case. It was the tasks that had OTD that had higher volumes of words translated and longer duration times between each process for translation task to kick-start. Please refer to OTD-Deliverables and Non-OTD Deliverables graphs.
+The determining factor in what contributed most to OTD was determined by heatmaps that showed how positively or negatively two columns were related to each other. Based on the variables being tested against each other for correlation/association, different metric was used.
 
-![otd_deliverables](otd_deliverables.png)
-![nonotd_deliverables](nonotd_deliverables.png)
+Numerical vs Numerical: Pearson's R Coefficient
+Numerical vs Nominal (Non-Binary): Correlation Ratio
+Numerical vs Nominal (Binary): Point Biserial Correlation Coefficient
+Nominal vs Nominal: Cramer's V (has no direction for association)/Thiel's U (for association direction - +/-)
 
-The determining factor in what contributed most to OTD was determined by heatmaps that showed how positively or negatively two columns were related to each other. The closer to +1 the more similar they were and the closer to -1 the least similar these columns were to each other. Three heatmaps (in order below: requests, deliverables, translation tasks) were run in order to show from requests/deliverables/task level, which columns contributed most to OTD. During some exploratory data analysis, it was found that a project manager could be managing deliverables that are turned in on time and not on time. So singling out project managers was not possible. Another interesting finding was that through crude correlation analysis with pivot tables, found that there were some strong correlations between source (tgl-PH) and target (en-SG) languages leading to non-OTD's. Of course the most illuminating contributor to deliverable having OTD was not how many words or how many tasks were in a deliverable, but the **translator/supplier** who took up the task!
+Each measurement has an effect size to determine how significant the correlation/association was. The cut-off's were 0-0.3 for small, >0.3 and <=0.5 for medium and >0.5 for large effect sizes.
+
+Some correlations/associations were disregarded due to multicollinearity, an affect when two columns show high correlation/association because they show the same thing.
+
+The closer to +1 the more similar they were and the closer to -1 the least similar these columns were to each other. Three heatmaps (in order below: requests, deliverables, translation tasks) were run in order to show from requests/deliverables/task level, which columns contributed most to OTD. During some exploratory data analysis, it was found that a project manager could be managing deliverables that are turned in on time and not on time. So singling out project managers was not possible. Another interesting finding was that through crude correlation analysis with pivot tables, found that there were some strong correlations between source (tgl-PH) and target (en-SG) languages leading to non-OTD's. Of course the most illuminating contributor to deliverable having OTD was not how many words or how many tasks were in a deliverable, but the ** project manager & translator/supplier** who took up the task!
 
 ![requests_corr](requests_corr.png)
 ![deliverables_corr](deliverables_corr.png)
