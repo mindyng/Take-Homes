@@ -39,12 +39,12 @@ The closer to -/+ 1 the more similar they were (with + meaning as one variable i
 The most illuminating contributor to deliverable having OTD was not how many words or how many tasks were in a deliverable, but the **project manager & translator/supplier** who took up the task!
 
 During some exploratory data analysis, it was also found:
-** a. A project manager could be managing deliverables that are turned in on time *and* not on time. So singling out project managers was not possible. 
-b. Also, what kept project managers behind possibly were higher number of requests. However, to get a better comparison, this number could have been weighted (sum of total requests divided by total distinct project managers).
-c. It was found that translators were successful at OTD even though they had more translation tasks and words per deliverable.
-d. Another interesting finding was that through crude correlation analysis with pivot tables, found that there were some strong correlations between source (tgl-PH) and target (en-SG) languages leading to non-OTD's. 
-e. The biggest clogger in a delivery task completion journey is the start time.
-f. Legal & Financial Services suffered most from OTD.
+* A project manager could be managing deliverables that are turned in on time *and* not on time. So singling out project managers was not possible. 
+*  Also, what kept project managers behind possibly were higher number of requests. However, to get a better comparison, this number could have been weighted (sum of total requests divided by total distinct project managers).
+* It was found that translators were successful at OTD even though they had more translation tasks and words per deliverable.
+* Another interesting finding was that through crude correlation analysis with pivot tables, found that there were some strong correlations between source (tgl-PH) and target (en-SG) languages leading to non-OTD's. 
+* The biggest clogger in a delivery task completion journey is the start time.
+* Legal & Financial Services suffered most from OTD.
 
 3. To discuss: imagine you are contributing to an initiative to improve OTD performance at Welocalize. Brainstorm and tell us what you and the team might do, based on your insights from #2, above. What questions might you ask? Who might you involve? What are some potential actions that Welocalize might take, to improve OTD performance?
 
