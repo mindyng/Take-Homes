@@ -2,8 +2,8 @@
 
 The tools I used were:
 a. My local machine to spin up PostgreSQL Database to store original data file and create transformations.
-b. Kaggle notebook to create ipynb.
-c. All code is in the same path as this file.
+b. Kaggle platform to use Jupyter Notebook to peform analysis.
+c. All code is in code folder stored in the same path as this file.
 
 2. Develop and show at least 3 different data visualizations showing how Welocalize performed in terms of OTD rates (how frequently we deliver on time vs. late). Consider how these OTD rates are correlated with other attributes/variables from the dataset. Be prepared to explain how you calculated OTD rates; what the visuals demonstrate; and what are the most important conclusions you drew from the data.
 
@@ -12,9 +12,9 @@ In terms of OTD rates, for majority of 2022, the company was within customer tol
 
 ![overallpie](pie.png)
 
-We can see here that 90.5% are OTD's (True) and 9.5% (False) need some work. The neighboring graph just shows straight counts for reference. Even though Welocalize made the cut-off for customer acceptance, still room for improvement.
+We can see here that 90.5% are OTD's (True) and 9.5% (False) need some work. The neighboring graph just shows straight counts for reference. Even though Welocalize made the cut-off for customer acceptance, there is still room for improvement.
 
-After calculating OTD %'s, I explored how these looked at the year, monthly, weekly, day in month and day in week levels. The most illuminating seemed to be monthly and weekly since they seemed to show some trends/seasonality. OTD's drop significantly every 10 weeks until appoximately 32nd week of 2022/August.
+After calculating OTD %'s, I explored how these looked at the year, monthly, weekly, day in month and day in week levels. The most illuminating seemed to be monthly and weekly since they showed some trends/seasonality. OTD's drop significantly every 10 weeks until appoximately 32nd week of 2022/August.
 
 ![monthly](monthly.png)
 ![weekly](weekly.png)
@@ -24,17 +24,27 @@ The determining factor in what contributed most to OTD was determined by heatmap
 Numerical vs Numerical: Pearson's R Coefficient
 Numerical vs Nominal (Non-Binary): Correlation Ratio
 Numerical vs Nominal (Binary): Point Biserial Correlation Coefficient
-Nominal vs Nominal: Cramer's V (has no direction for association)/Thiel's U (for association direction - +/-)
+Nominal vs Nominal: Cramer's V (has no direction for association)/Thiel's U (has direction for association - +/-)
 
 Each measurement has an effect size to determine how significant the correlation/association was. The cut-off's were 0-0.3 for small, >0.3 and <=0.5 for medium and >0.5 for large effect sizes.
 
-Some correlations/associations were disregarded due to multicollinearity, an affect when two columns show high correlation/association because they show the same thing.
+Some correlations/associations were disregarded due to multicollinearity, an affect when two columns show high correlation/association because they show the same behavior/attribute when compared to target value.
 
-The closer to +1 the more similar they were and the closer to -1 the least similar these columns were to each other. Three heatmaps (in order below: requests, deliverables, translation tasks) were run in order to show from requests/deliverables/task level, which columns contributed most to OTD. During some exploratory data analysis, it was found that a project manager could be managing deliverables that are turned in on time and not on time. So singling out project managers was not possible. Another interesting finding was that through crude correlation analysis with pivot tables, found that there were some strong correlations between source (tgl-PH) and target (en-SG) languages leading to non-OTD's. Of course the most illuminating contributor to deliverable having OTD was not how many words or how many tasks were in a deliverable, but the ** project manager & translator/supplier** who took up the task!
+The closer to -/+ 1 the more similar they were (with + meaning as one variable increases other does as well and - meaning vice versa). The closer to 0 the reading was the least similar these columns were to each other. Three heatmaps (in order below: requests, deliverables, translation tasks) were run in order to show from requests/deliverables/task level, which columns contributed most to OTD. 
 
 ![requests_corr](requests_corr.png)
 ![deliverables_corr](deliverables_corr.png)
 ![task_corr](task_corr.png)
+
+The most illuminating contributor to deliverable having OTD was not how many words or how many tasks were in a deliverable, but the ** project manager & translator/supplier** who took up the task!
+
+During some exploratory data analysis, it was also found:
+a. A project manager could be managing deliverables that are turned in on time *and* not on time. So singling out project managers was not possible. 
+b. Also, what kept project managers behind possibly were higher number of requests. However, to get a better comparison, this number could have been weighted (sum of total requests divided by total distinct project managers).
+c. It was found that translators were successful at OTD even though they had more translation tasks and words per deliverable.
+d. Another interesting finding was that through crude correlation analysis with pivot tables, found that there were some strong correlations between source (tgl-PH) and target (en-SG) languages leading to non-OTD's. 
+e. The biggest clogger in a delivery task completion journey is the start time.
+f. Legal & Financial Services suffered most from OTD.
 
 3. To discuss: imagine you are contributing to an initiative to improve OTD performance at Welocalize. Brainstorm and tell us what you and the team might do, based on your insights from #2, above. What questions might you ask? Who might you involve? What are some potential actions that Welocalize might take, to improve OTD performance?
 
