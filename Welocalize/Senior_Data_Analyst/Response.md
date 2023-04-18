@@ -36,7 +36,7 @@ The closer to -/+ 1 the more similar they were (with + meaning as one variable i
 ![deliverables_corr](deliverables_corr.png)
 ![task_corr](task_corr.png)
 
-The most illuminating contributor to deliverable having OTD was not how many words or how many tasks were in a deliverable, but the ** project manager & translator/supplier** who took up the task!
+The most illuminating contributor to deliverable having OTD was not how many words or how many tasks were in a deliverable, but the **project manager & translator/supplier** who took up the task!
 
 During some exploratory data analysis, it was also found:
 * a. A project manager could be managing deliverables that are turned in on time *and* not on time. So singling out project managers was not possible. 
