@@ -40,7 +40,7 @@ The most illuminating contributor to deliverable having OTD was not how many wor
 
 During some exploratory data analysis, it was also found:
 * A project manager could be managing deliverables that are turned in on time *and* not on time. So singling out project managers was not possible. 
-*  Also, what kept project managers behind possibly were higher number of requests. However, to get a better comparison, this number could have been weighted (sum of total requests divided by total distinct project managers).
+* Also, what kept project managers behind possibly were higher number of requests. However, to get a better comparison, this number could have been weighted (sum of total requests divided by total distinct project managers).
 * It was found that translators were successful at OTD even though they had more translation tasks and words per deliverable.
 * Another interesting finding was that through crude correlation analysis with pivot tables, found that there were some strong correlations between source (tgl-PH) and target (en-SG) languages leading to non-OTD's. 
 * The biggest clogger in a delivery task completion journey is the start time.
@@ -55,13 +55,14 @@ Given that it was determined that translator/linguist contributes most to whethe
 There were a couple of data issues:
 * The dataset was of mixed granularity. I ended up separating out deliverable info from requests and translation task info. Requests comprise of multiple deliverables. And deliverables have multiple tasks which can include a translation task 
 * Took out NULL values from is_client_deliverable_past_due (2 rows only; low % of whole dataset)
-* Transformed data into correct data given column data type (boolean -> TRUE/FALSE)
+* Transformed data into correct data value given column data type (boolean -> TRUE/FALSE)
 * Created consistent precision (round to nearest seconds vs having seconds to thousandth's place)
 * Also, having target column as a flag defined as completing the action would be best; e.g. OTD flag with 1 being True and 0 being False vs is_client_deliverable_past_due = Y/N
 * Some columns in content specialty variable had DO_NOT_USE suffix
 * Having shorter column names and allow data dictionary to mitigate possible confusion
 
 1. To mitigate mixed columns, separated out requests and tasks columns from deliverable columns. In "real world" there would be three different tables: requests, deliverables, tasks with their own primary ID's. Foreign keys would allow all three tables to be joined together. Would talk to Data Engineer regarding making these schemas. 
-2. Making sure column data, precision and decent length column names are correct would involve discussions with Data Engineering as well in the "real world".
-3. Because this was not available with sample dataset I was given, there were pre-processing steps I had to go through before analyzing the data.
-4. Have a robust data dictionary in order to describe state of table in warehouse and cautions for analytics use.
+2. Taking out NULL values would be based on % of the dataset population. Usually less than 10% is acceptable to retain main chunk of dataset's information.
+3. Making sure column data values, values' precision, column name lengths and business logic translations are correct would involve discussions with Data Engineering very early on.
+4. Because this was not available with sample dataset I was given, there were pre-processing steps I had to go through before analyzing the data.
+5. Having a robust data dictionary in order to describe state of table in warehouse and cautions for analytics use would be another wise data org move.
