@@ -1,6 +1,6 @@
 Working as the data team’s point person on this project, you are responsible for pulling together and manipulating relevant data to advise the product manager on how the data can drive this new feature forward. Central to these tasks are the tables in your company’s database that contain user information and profile view records. To help you familiarize yourself with where the data live, here's a visual and explanation of the table schema:
 
-![table_schema](schema.png)
+![table_schema](analyst_schema.png)
 
 Briefly,
 
