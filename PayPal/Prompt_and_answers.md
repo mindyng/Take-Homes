@@ -53,7 +53,7 @@ SELECT CASE WHEN country_code IS NULL THEN 'FOO' ELSE country_code END AS countr
 FROM public.continent_map
 WHERE country_code IS NULL
 
-UNION ALL
+UNION
 
 SELECT country_code
 FROM (SELECT country_code
