@@ -6,12 +6,18 @@ This is an opportunity for you to show us your grasp of SQL which plays a key ro
 A few important things to note before you get started:
 
 All work should be done in SQL. Any variant is fine (e.g. MS SQL, Postgres, MySQL, etc.). If you normally use R, SAS, or other similar tools with SQL it's important that you show that you can work in SQL by itself to produce the correct answers to this challenge.
+
 If you are confused by a specific question, you can request clarification by replying to the message that this challenge was attached to. This is NOT intended for you to obtain technical help with solving the problems on this challenge or asking for hints; it should only be used for question clarification.
 This challenge is due back within 1 week (7 calendar days) of being sent to you.
+
 If you cannot answer a question, please do your best, show your work, leave comments, and let us know your general thoughts.
+
 We are interested in BOTH your answers and the work/code that you write to get them. Please leave plenty of comments for us to read when we review your work.
+
 There are some blank/null values in this set. That's how we found it and it reflects the nature of imperfect data. Please work with this and provide explanations of any issues or workarounds required to arrive at your answers.
+
 There are no intentional gotchas, trick questions, or traps; the challenge is intended to demonstrate some of the typical day-to-day SQL skills that the job requires.
+
 Some of these questions may seem nonsensical and you may find yourself asking, "why would anyone want to know that?!" They are intended purely as a measure of your SQL skills and not as actual questions that we would expect to ask of this type of data set. Please take them with a grain of salt.
 We will review all code submissions and get back to you within 1 week of submission.
 
@@ -84,7 +90,8 @@ running_total
 7. Find the country with the highest average gdp_per_capita for each continent for all years. Now compare your list to the following data set. Please describe any and all mistakes that you can find with the data set below. Include any code that you use to help detect these mistakes.
 
 rank	continent_name	country_code	country_name	avg_gdp_per_capita
-| 1	| Africa| 	SYC| 	Seychelles	| $11,348.66
+| 1	| Africa | SYC | Seychelles	| $11,348.66
+| --- | --- |
 1	Asia	KWT	Kuwait	$43,192.49
 1	Europe	MCO	Monaco	$152,936.10
 1	North America	BMU	Bermuda	$83,788.48
