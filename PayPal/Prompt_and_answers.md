@@ -66,6 +66,22 @@ ORDER BY 1) AS sub;
 
 For all countries that have multiple rows in the continent_map table, delete all multiple records leaving only the 1 record per country. The record that you keep should be the first one when sorted by the continent_code alphabetically ascending. Provide the query/ies and explanation of step(s) that you follow to delete these records.
 
+*In order to delete the dup's as specified above, used ROW_NUMBER() window function to partition function by country code. And per country code, dup's were ordered by continent_code in alphabetical order. Then filtering on first row number pulled 1 record of country_code.*
+
+```
+WITH country_count AS (SELECT country_code
+, continent_code
+, ROW_NUMBER() OVER (PARTITION BY country_code ORDER BY continent_code) AS country_cnt
+FROM public.continent_map
+WHERE country_code IS NOT NULL
+)
+
+SELECT country_code
+, continent_code
+FROM country_count
+WHERE country_cnt = 1
+```
+
 2. List the countries ranked 10-12 in each continent by the percent of year-over-year growth descending from 2011 to 2012.
 
 The percent of growth should be calculated as: ((2012 gdp - 2011 gdp) / 2011 gdp)
