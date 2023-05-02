@@ -23,20 +23,46 @@ We will review all code submissions and get back to you within 1 week of submiss
 
 Finally, this is NOT an MS Excel/spreadsheet exercise. Excel is an important data tool that we regularly use. It could even feasibly be used to answer all of these questions. However, this is meant to measure your technical abilities with SQL.
 
-Instructions
+Instructions:
+
 Create a SQL database using the attached CSV files.
+
 Use the database to answer the following questions.
+
 All answers that return money values should be rounded to 2 decimal points and preceded by the "$" symbol (e.g. "$1432.10").
+
 All answers that return percent values should be between -100.00 to 100.00, rounded to 2 decimal points and followed by the "%" symbol (e.g. "58.30%").
+
 Copy & paste the questions from the section below into a new plain .txt file named: {firstname}_{lastname}_code_challenge.txt (e.g. "john_smith_code_challenge.txt").
+
 Provide all of the results of your work as answers; we cannot evaluate your work without your query results!
+
 Provide all code, including what you used to create the database and import data, and answers related to each question immediately below the question.
+
 Feel free to leave lots of notes/comments to help us understand your work.
 When you are ready, reply to this email and attach your results.
+
+___
 Code Challenge v2.11
 1. Data Integrity Checking & Cleanup
 
 Alphabetically list all of the country codes in the continent_map table that appear more than once. Display any values where country_code is null as country_code = "FOO" and make this row appear first in the list, even though it should alphabetically sort to the middle. Provide the results of this query as your answer.
+
+```
+SELECT CASE WHEN country_code IS NULL THEN 'FOO' ELSE country_code END AS country_code
+FROM public.continent_map
+WHERE country_code IS NULL
+
+UNION ALL
+
+SELECT country_code
+FROM (SELECT country_code
+, COUNT(*) AS country_cnt
+FROM public.continent_map
+GROUP BY 1
+HAVING COUNT(country_code) > 1
+ORDER BY 1) AS sub;
+```
 
 For all countries that have multiple rows in the continent_map table, delete all multiple records leaving only the 1 record per country. The record that you keep should be the first one when sorted by the continent_code alphabetically ascending. Provide the query/ies and explanation of step(s) that you follow to delete these records.
 
