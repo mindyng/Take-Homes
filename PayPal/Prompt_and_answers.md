@@ -88,11 +88,59 @@ The percent of growth should be calculated as: ((2012 gdp - 2011 gdp) / 2011 gdp
 
 The list should include the columns:
 
-rank
-continent_name
-country_code
-country_name
-growth_percent
+* rank
+* continent_name
+* country_code
+* country_name
+* growth_percent
+
+```
+WITH ttl_gdp AS (SELECT continent_name
+, c.country_code
+, country_name
+, year
+, SUM(gdp_per_capita) AS total_gdp
+FROM public.per_capita AS c
+JOIN public.continent_map AS m
+ON c.country_code = m.country_code
+JOIN public.continents AS cont
+ON m.continent_code = cont.continent_code
+JOIN public.countries AS co
+ON m.country_code = co.country_code
+WHERE year IN (2011, 2012)
+GROUP BY 1, 2, 3, 4
+ORDER BY 1 , 2
+)
+
+, earlier_gdp AS (SELECT DISTINCT continent_name
+, country_code
+, country_name
+, year
+, total_gdp
+, LAG(total_gdp) OVER (PARTITION BY continent_name, country_name ORDER BY year) AS prev_yr_gdp
+FROM ttl_gdp
+)
+
+, percent_growth AS (SELECT *
+, (total_gdp - prev_yr_gdp)/prev_yr_gdp AS growth_percent
+FROM earlier_gdp
+WHERE (total_gdp - prev_yr_gdp)/prev_yr_gdp IS NOT NULL
+)
+
+, gdp_rank AS (SELECT RANK() OVER (PARTITION BY continent_name ORDER BY growth_percent DESC) AS rk
+, continent_name
+, country_code
+, country_name
+, growth_percent
+FROM percent_growth
+)
+
+SELECT *
+FROM gdp_rank
+WHERE rk BETWEEN 10 AND 12
+ORDER BY continent_name, rk
+```
+
 3. For the year 2012, create a 3 column, 1 row report showing the percent share of gdp_per_capita for the following regions:
 
 (i) Asia, (ii) Europe, (iii) the Rest of the World. Your result should look something like
