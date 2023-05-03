@@ -173,7 +173,33 @@ FROM pivot
 
 4a. What is the count of countries and sum of their related gdp_per_capita values for the year 2007 where the string 'an' (case insensitive) appears anywhere in the country name?
 
+```
+SELECT country_name
+, COUNT(country_name) OVER () AS total_countries 
+, SUM(gdp_per_capita) AS total_gdp_per_capita
+FROM public.per_capita AS pc
+JOIN public.countries AS c
+ON pc.country_code = c.country_code
+WHERE year = 2007
+AND LOWER(country_name) LIKE '%an%'
+GROUP BY 1
+ORDER BY 3 DESC
+```
+
 4b. Repeat question 4a, but this time make the query case sensitive.
+
+```
+SELECT country_name
+, COUNT(country_name) OVER () AS total_countries 
+, SUM(gdp_per_capita) AS total_gdp_per_capita
+FROM public.per_capita AS pc
+JOIN public.countries AS c
+ON pc.country_code = c.country_code
+WHERE year = 2007
+AND country_name LIKE '%an%'
+GROUP BY 1
+ORDER BY 3 DESC
+```
 
 5. Find the sum of gpd_per_capita by year and the count of countries for each year that have non-null gdp_per_capita where (i) the year is before 2012 and (ii) the country has a null gdp_per_capita in 2012. Your result should have the columns:
 
@@ -185,10 +211,11 @@ FROM pivot
 
 a. create a single list of all per_capita records for year 2009 that includes columns:
 
-continent_name
-country_code
-country_name
-gdp_per_capita
+* continent_name
+* country_code
+* country_name
+* gdp_per_capita
+
 b. order this list by:
 
 continent_name ascending
@@ -197,11 +224,12 @@ c. create a running total of gdp_per_capita by continent_name
 
 d. return only the first record from the ordered list for which each continent's running total of gdp_per_capita meets or exceeds $70,000.00 with the following columns:
 
-continent_name
-country_code
-country_name
-gdp_per_capita
-running_total
+* continent_name
+* country_code
+* country_name
+* gdp_per_capita
+* running_total
+
 7. Find the country with the highest average gdp_per_capita for each continent for all years. Now compare your list to the following data set. Please describe any and all mistakes that you can find with the data set below. Include any code that you use to help detect these mistakes.
 
 | rank	| continent_name |	country_code	| country_name	| avg_gdp_per_capita
