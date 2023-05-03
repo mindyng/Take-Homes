@@ -146,7 +146,7 @@ ORDER BY continent_name, rk
 (i) Asia, (ii) Europe, (iii) the Rest of the World. Your result should look something like
 
 |Asia |	Europe | Rest of World
-|---|
+|---|---|---|
 |25.0%	| 25.0% |	50.0%
 
 ```
