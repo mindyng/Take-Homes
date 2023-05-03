@@ -135,7 +135,11 @@ WHERE (total_gdp - prev_yr_gdp)/prev_yr_gdp IS NOT NULL
 FROM percent_growth
 )
 
-SELECT *
+SELECT rk AS rank
+, continent_name
+, country_code
+, country_name
+, CONCAT(ROUND(growth_percent *100, 2), '%') AS growth_percent
 FROM gdp_rank
 WHERE rk BETWEEN 10 AND 12
 ORDER BY continent_name, rk
