@@ -161,8 +161,8 @@ ON cc.continent_code = c.continent_code
 WHERE year = 2012
 )
 
-SELECT CONCAT(ROUND(asia/(asia + europe + rest_of_world) *100, 1), '%') AS asia
-, CONCAT(ROUND(europe/(asia + europe + rest_of_world) *100, 1), '%') AS europe
+SELECT CONCAT(ROUND(asia/(asia + europe + rest_of_world) *100, 2), '%') AS asia
+, CONCAT(ROUND(europe/(asia + europe + rest_of_world) *100, 2), '%') AS europe
 , CONCAT(ROUND(rest_of_world/(asia + europe + rest_of_world) *100, 1), '%') AS rest_of_world
 FROM pivot
 ```
@@ -173,9 +173,10 @@ FROM pivot
 
 5. Find the sum of gpd_per_capita by year and the count of countries for each year that have non-null gdp_per_capita where (i) the year is before 2012 and (ii) the country has a null gdp_per_capita in 2012. Your result should have the columns:
 
-year
-country_count
-total
+* year
+* country_count
+* total
+
 6. All in a single query, execute all of the steps below and provide the results as your final answer:
 
 a. create a single list of all per_capita records for year 2009 that includes columns:
