@@ -145,8 +145,28 @@ ORDER BY continent_name, rk
 
 (i) Asia, (ii) Europe, (iii) the Rest of the World. Your result should look something like
 
-Asia	Europe	Rest of World
-25.0%	25.0%	50.0%
+|Asia |	Europe | Rest of World
+|---|
+|25.0%	| 25.0% |	50.0%
+
+```
+WITH pivot AS (SELECT SUM(CASE WHEN continent_name = 'Asia' THEN gdp_per_capita ELSE 0 END) AS Asia
+, SUM(CASE WHEN continent_name = 'Europe' THEN gdp_per_capita ELSE 0 END) AS Europe
+, SUM(CASE WHEN continent_name NOT IN ('Asia', 'Europe') THEN gdp_per_capita ELSE 0 END) AS Rest_Of_World
+FROM public.per_capita AS pc
+JOIN public.continent_map AS cc
+ON pc.country_code = cc.country_code
+JOIN public.continents AS c
+ON cc.continent_code = c.continent_code
+WHERE year = 2012
+)
+
+SELECT CONCAT(ROUND(asia/(asia + europe + rest_of_world) *100, 1), '%') AS asia
+, CONCAT(ROUND(europe/(asia + europe + rest_of_world) *100, 1), '%') AS europe
+, CONCAT(ROUND(rest_of_world/(asia + europe + rest_of_world) *100, 1), '%') AS rest_of_world
+FROM pivot
+```
+
 4a. What is the count of countries and sum of their related gdp_per_capita values for the year 2007 where the string 'an' (case insensitive) appears anywhere in the country name?
 
 4b. Repeat question 4a, but this time make the query case sensitive.
