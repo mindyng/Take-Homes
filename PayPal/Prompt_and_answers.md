@@ -207,6 +207,26 @@ ORDER BY 3 DESC
 * country_count
 * total
 
+```
+SELECT DISTINCT year
+, COUNT(country_code) OVER (PARTITION BY year) AS country_count
+, SUM(gdp_per_capita) OVER (PARTITION BY year) AS total
+FROM public.per_capita
+WHERE gdp_per_capita IS NOT NULL
+AND YEAR < 2012
+ORDER BY 1
+```
+NOT SURE:
+```
+SELECT DISTINCT year
+, COUNT(country_code) OVER (PARTITION BY year) AS country_count
+, SUM(gdp_per_capita) OVER (PARTITION BY year) AS total
+FROM public.per_capita
+WHERE gdp_per_capita IS NULL
+AND YEAR = 2012
+ORDER BY 1
+```
+
 6. All in a single query, execute all of the steps below and provide the results as your final answer:
 
 a. create a single list of all per_capita records for year 2009 that includes columns:
