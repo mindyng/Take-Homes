@@ -208,22 +208,20 @@ ORDER BY 3 DESC
 * total
 
 ```
-SELECT DISTINCT year
-, COUNT(country_code) OVER (PARTITION BY year) AS country_count
-, SUM(gdp_per_capita) OVER (PARTITION BY year) AS total
+SELECT year
+, COUNT(DISTINCT c.country_code) AS country_count
+, SUM(gdp_per_capita) AS total
+FROM public.countries AS c
+LEFT JOIN public.per_capita AS pc
+ON c.country_code = pc.country_code
+WHERE c.country_code IN
+(SELECT country_code
 FROM public.per_capita
-WHERE gdp_per_capita IS NOT NULL
-AND YEAR < 2012
-ORDER BY 1
-```
-NOT SURE:
-```
-SELECT DISTINCT year
-, COUNT(country_code) OVER (PARTITION BY year) AS country_count
-, SUM(gdp_per_capita) OVER (PARTITION BY year) AS total
-FROM public.per_capita
-WHERE gdp_per_capita IS NULL
-AND YEAR = 2012
+WHERE year = 2012
+AND gdp_per_capita IS NULL) 
+AND year < 2012
+AND gdp_per_capita IS NOT NULL
+GROUP BY 1
 ORDER BY 1
 ```
 
