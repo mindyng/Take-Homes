@@ -236,8 +236,9 @@ a. create a single list of all per_capita records for year 2009 that includes co
 
 b. order this list by:
 
-continent_name ascending
-characters 2 through 4 (inclusive) of the country_name descending
+* continent_name ascending
+* characters 2 through 4 (inclusive) of the country_name descending
+
 c. create a running total of gdp_per_capita by continent_name
 
 d. return only the first record from the ordered list for which each continent's running total of gdp_per_capita meets or exceeds $70,000.00 with the following columns:
@@ -247,6 +248,44 @@ d. return only the first record from the ordered list for which each continent's
 * country_name
 * gdp_per_capita
 * running_total
+
+```
+WITH total AS (SELECT continent_name
+, cm.country_code
+, country_name
+, gdp_per_capita
+, SUM(gdp_per_capita) OVER (PARTITION BY continent_name) AS running_total
+FROM public.per_capita AS pc
+JOIN public.continent_map AS cm
+ON pc.country_code = cm.country_code
+JOIN public.continents AS con
+ON cm.continent_code = con.continent_code
+JOIN public.countries AS cou
+ON cm.country_code = cou.country_code
+WHERE year = 2009
+ORDER BY continent_name ASC
+, SUBSTRING(country_name, 2, 3) DESC
+)
+
+, gdp_rk AS (SELECT continent_name
+, country_code
+, country_name
+, gdp_per_capita
+, running_total
+, RANK() OVER (PARTITION BY continent_name ORDER BY continent_name ASC
+, SUBSTRING(country_name, 2, 3) DESC) AS rk
+FROM total
+WHERE running_total >= 70000
+)
+
+SELECT continent_name
+, country_code
+, country_name
+, gdp_per_capita
+, running_total
+FROM gdp_rk
+WHERE rk = 1	
+```
 
 7. Find the country with the highest average gdp_per_capita for each continent for all years. Now compare your list to the following data set. Please describe any and all mistakes that you can find with the data set below. Include any code that you use to help detect these mistakes.
 
