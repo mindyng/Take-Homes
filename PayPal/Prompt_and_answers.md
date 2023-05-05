@@ -297,3 +297,42 @@ WHERE rk = 1
 | 1 | North America | BMU	| Bermuda | $83,788.48 | 
 | 1 | Oceania | AUS | Australia | $47,070.39 | 
 | 1 | South America | CHL | Chile | $10,781.71 | 
+
+```
+--
+WITH avg_gdp AS (SELECT continent_name
+, cm.country_code
+, country_name
+, AVG(gdp_per_capita) AS avg_gdp_country
+FROM public.per_capita AS pc
+JOIN public.continent_map AS cm
+ON pc.country_code = cm.country_code
+JOIN public.continents AS con
+ON cm.continent_code = con.continent_code
+JOIN public.countries AS cou
+ON cm.country_code = cou.country_code
+GROUP BY 1, 2, 3
+)
+
+, gdp_rk AS (SELECT continent_name
+, country_code
+, country_name
+, avg_gdp_country
+, RANK() OVER (PARTITION BY continent_name ORDER BY avg_gdp_country DESC) AS rk
+FROM avg_gdp
+)
+
+SELECT rk AS rank
+, continent_name
+, country_code
+, country_name
+, CAST(avg_gdp_country AS money)
+FROM gdp_rk
+WHERE rk = 1	
+ORDER BY 2
+```
+
+Data quality issues are:
+
+1. Africa and Asia's country for highest country averages do not match. The average gdp is lower in above table. 
+2. Also, there are some inaccurate roundings/precision happening with the rest of the continents' countries.
