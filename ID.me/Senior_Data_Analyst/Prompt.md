@@ -21,7 +21,9 @@ Currently, DogDB has tables which are sampled below.
 
 <img width="599" alt="customer_accounts" src="https://github.com/mindyng/Take-Homes/assets/12889138/51047266-37fd-4e26-a81e-0ce43648cf76">
 
+<img width="693" alt="customer_interactions" src="https://github.com/mindyng/Take-Homes/assets/12889138/01b45ea2-79f6-454c-84e7-7987b0bee75e">
 
+<img width="550" alt="customer_licenses" src="https://github.com/mindyng/Take-Homes/assets/12889138/17af00d7-c28a-42f4-8bb6-94ef1346c887">
 
 1) Based on the table design above, what are your initial thoughts about DogDB’s data tracking? What are
 some of the advantages (if any) of their data models, and what are the shortcomings (if any) you foresee in
