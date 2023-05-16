@@ -1,0 +1,5 @@
+account_id,channel,category,service_rep,status,created_at,completed_at
+1,web,Tech Support,Andy,resolved,2021-01-25 19:11:35.295813+00,2021-01-25 19:13:52.812371+00
+1,email,Billing,Jillian,open,2021-04-06 22:23:09.581234+00,
+3,web,Billing,Monica,resolved,2021-11-13 06:25:54.821374+00,2021-11-15 12:19:33.882136+00
+7,phone,Account Change,Derek,canceled,2022-02-14 15:02:47.219352+00,2022-02-20 09:22:48.145523+00
