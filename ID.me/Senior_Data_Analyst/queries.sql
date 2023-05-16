@@ -3,10 +3,13 @@
 
 -- You have been tasked with designing a model to provide the data for the analyst. How would you structure the output? Include the query you would use to create the model.
 
+--SQL query plan:
 --filter on active licenses
---by account (and month), get count of licenses
---rank in descending order highest amount of licenses per account
---make sure final table has month, interaction channel, category, service representative, interaction status by joining customer_licenses with customer_interactions (after aggregation in customer_licenses on active licenses per month from interactions, account)
+--by account, get count of active dev licenses
+--rank in descending order highest amount of active dev licenses per account
+--filter table by top 10
+--join this table to interactions table
+--make sure final table has interaction month, high active dev lic account_id's, interaction channel, category, service representative, interaction status
 
 WITH unnesting AS (
 SELECT account_id
