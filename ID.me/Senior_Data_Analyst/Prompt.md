@@ -1,6 +1,6 @@
 # Instructions: 
 
-<span style="color:blue">some *blue* text</span>.
+<font color='red'>client retention and satisfaction</font>
 
 The narrative below presents a hypothetical situation where you are an analytics engineer at a
 SAAS startup and poses some scenarios in a chronological order. Use your previous work experience and
