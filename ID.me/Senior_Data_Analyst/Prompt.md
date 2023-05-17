@@ -1,5 +1,7 @@
 # Instructions: 
 
+<span style="color:blue">some *blue* text</span>.
+
 The narrative below presents a hypothetical situation where you are an analytics engineer at a
 SAAS startup and poses some scenarios in a chronological order. Use your previous work experience and
 judgment to augment the details provided. Build your own narrative around the fictional SAAS company and
