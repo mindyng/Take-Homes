@@ -45,3 +45,18 @@ VALUES
   (6, '{"license_id": "be49ad8f4a68fbbdd1674b41da20759f54b0e930", "role": "developer", "status": "active"}', '2021-05-28 04:42:58.955093+00', '2021-05-28 04:42:58.955093+00'),
   (6, '{"license_id": "8541866bb3a4c4ecf070b2c1b2f7bb9c0934d287", "role": "admin", "status": "active"}', '2022-10-30 21:33:46.353060+00', '2022-10-30 21:33:46.353060+00'),
   (35,'{"license_id": "60831f59a531eef325e525ad58bae0e5e8c2d75a", "role":"developer", "status":"disabled"}', '2021-03-26 02:38:02.136033+00', '2022-07-21 23:03:29.862040+00');
+  
+CREATE TABLE customer_invoices (
+  "account_id" INTEGER,
+  "invoice_created" TIMESTAMP,
+  "price" FLOAT,
+  "payment_method" VARCHAR(18),
+  "payment_total" FLOAT
+);
+
+INSERT INTO customer_invoices
+  ("account_id", "invoice_created", "price", "payment_method", "payment_total")
+VALUES
+  ('1', '2019-05-01 21:13:05.156042+00', '0.00', NULL, '0.00'),
+  ('2', '2020-01-04 17:23:05.594305+00', '50.00', 'Credit', '51.20'),
+  ('3', '2019-09-17 04:32:32.493065+00', '500.00', 'ACH', '500.00');
