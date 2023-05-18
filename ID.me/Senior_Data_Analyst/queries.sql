@@ -1,4 +1,26 @@
--- Ref: (creation of tables and queries) https://www.db-fiddle.com/f/cGXjLQJ3Gz1vy7ucVMjngx/2
+-- Reference (creation of tables and queries) | https://www.db-fiddle.com/f/cGXjLQJ3Gz1vy7ucVMjngx/6
+
+-- 2. Every month, DogDB’s accountant receives a report from the engineering team to assist with accounting. Customers on the medium tier are charged by credit card, but the accountant must know ahead of time what the expected charge will be. Customers on the enterprise tier are sent an invoice from DogDB. 
+
+-- Describe what the engineering team is most likely doing currently to support accounting in terms of process. Include the queries they are running if you think you can take a guess at what they are. What are some of the shortcomings of the current process?
+
+--SQL query plan:
+--create invoice table with invoice created date, price, payment method, payment total
+--join this to customer_accounts
+--ouput account id, account creation date, account updated date, current tier, invoice created date, price, payment method, payment total
+
+SELECT ca.account_id
+, created_at
+, updated_at
+, current_tier
+, invoice_created
+, price
+, payment_method
+, payment_total
+FROM customer_accounts AS ca
+JOIN customer_invoices AS ci
+ON ca.account_id = ci.account_id;
+
 -- 3. The customer service team has asked one of the data analysts to develop a dashboard to illustrate the monthly interaction volume of the accounts with the 10 highest number of active developer licenses. They are looking for various breakdowns by account, month, interaction channel, category, service representative, and interaction status.
 
 -- You have been tasked with designing a model to provide the data for the analyst. How would you structure the output? Include the query you would use to create the model.
