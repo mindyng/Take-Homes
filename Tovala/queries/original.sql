@@ -11,4 +11,5 @@ group by 1
 )
 select term_start_date, skip_rate
 from srs
+--where term_start_date NOT IN ('2020-11-23', '2020-12-21', '2021-11-22', '2021-12-20', '2022-11-21', '2022-12-19') //take out outliers
 order by 1
