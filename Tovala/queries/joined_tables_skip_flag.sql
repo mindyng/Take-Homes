@@ -68,4 +68,4 @@ FROM customer_term_summary AS cts
 LEFT JOIN customer_facts AS cf
 ON cts.customer_id = cf.customer_id
 LEFT JOIN oven_orders AS oo
-ON cf.customer_id = oo.customer_id
+ON cts.customer_id = oo.customer_id
