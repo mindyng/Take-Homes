@@ -7,7 +7,7 @@ term_start_date
 , COUNT(DISTINCT CASE WHEN subscription_status = 'active' THEN customer_term_id END) AS active_count //status on account was “active”
 , ROUND((skip_count / active_count),2) AS skip_rate
 FROM interview.customer_term_summary
-WHERE term_start_date NOT IN ('2020-11-23', '2020-12-21', '2021-11-22', '2021-12-20', '2022-11-21', '2022-12-19') //take out holiday outliers
+WHERE term_start_date NOT IN ('2020-11-23', '2020-12-21', '2021-11-22', '2021-12-20', '2022-11-21', '2022-12-19') //take out holiday activity
 AND term_start_date NOT BETWEEN '2020-03-15' AND '2021-12-31' //take out pandemic response activity 
 group by 1
 )
