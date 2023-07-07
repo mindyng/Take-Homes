@@ -20,7 +20,7 @@ Root Cause:
 These are the more obvious indicators of whether or not a customer skipped, but the non-obvious skipped customer behavior are:
 
 - first orders of size 4/8
-- Don't seek out deals (impulsive)
+- don't seek out deals (impulsive)
 - somewhat of a foodie
 - order gaps
 - around 50-65
@@ -30,7 +30,7 @@ These are the more obvious indicators of whether or not a customer skipped, but 
 - lower prob of being fitness enthusiast
 - lower prob of being part of warehouse club
 - eats less healthy
-- Less oven purchases
+- less oven purchases
 
 Difficult to determine "smoking gun" due to data provided since lot of issues with orders can come from customer support data which was not provided. Issues with order delivery (time), quality of product delivered as well as 
 oven quality/durability could be looked into as direct indicators to tendency to skip an order. With meal service with oven offered, these would be the usual issues that need to be addressed (on top of menu selection/
@@ -39,30 +39,25 @@ subscription plan price).
 However, when completing multivariate analyses, there were more insights that emerged:
 
 - Most tevala customers are eastern european. And those that tend to skip are from this ethnic group and are tech savy. Tech savy in general are the highest skippers. Other predominant ethnic groups are African American and Hispanic.
-- Those who skip are mostly from rural areas who rent and are homeowners likely and urban adjacent renter liklely.
-- Huge number of skippers in <2500 county population coming from Mediterranean, Hispanic and African-American customers.
-- Also, huge amount of skipping amongst customers who are in 2500-20K county population who are Southeast Asan.
-- You will skip if you are <40 weeks on platform (9 months), have less than high school education level and own a home. 
-- Other peak skip groups: grad/undergrad likely renter, grad likely/high school homeowner and some college renter. Range is huge.
-- Most skips peak at or little before 20 weeks on platform. 
-- Skippers do come from metro/rural, tech savy, rural/urban non adjacent wizard or rural tech savy.
-- Also, noticed that skippers tend to have lower orders per tenure ratio as county population gets smaller. Lower county populations also tend to have broader orders per tenure distributions.
-- Looks like lower the first order size number, the shorter their time has been on the platform.
+- those who skip are mostly from rural areas who rent and are homeowners likely and urban adjacent renter liklely.
+- huge number of skippers in <2500 county population coming from Mediterranean, Hispanic and African-American customers.
+- also, huge amount of skipping amongst customers who are in 2500-20K county population who are Southeast Asan.
+- you will skip if you are <40 weeks on platform (9 months), have less than high school education level and own a home. 
+- other peak skip groups: grad/undergrad likely renter, grad likely/high school homeowner and some college renter. Range is huge.
+- most skips peak at or little before 20 weeks on platform. 
+- skippers do come from metro/rural, tech savy, rural/urban non adjacent wizard or rural tech savy.
+- also, noticed that skippers tend to have lower orders per tenure ratio as county population gets smaller. Lower county populations also tend to have broader orders per tenure distributions.
+- looks like lower the first order size number, the shorter their time has been on the platform.
 
 Business Recommendations:
 
-1. Keep main group of subscribers happy (since they provide the profit) by focusing on their feedback and implementing their advice so they can extend their subscriptions and increase virality of product. This would help with churn since skipped
-is an indicator of paused/cancelled subscriptions. And we rather not have customers churn since it is more expensive to gain a customer than to keep them.
+1. Keep main group of subscribers happy (since they provide the profit) by focusing on their feedback and implementing their advice so they can extend their subscriptions and increase virality of product. This would help with churn since skipped is an indicator of paused/cancelled subscriptions. And we rather not have customers churn since it is more expensive to gain a customer than to keep them.
 
-Looks like typical active Tovala customer is western European, homeowner, tech savvy, works in a huge city,
-female, married, not many in family, into healthy eating, not thrifty, grocery delivery users and foodies, 
-mostly in 30-50's.
+Looks like typical active Tovala customer is western European, homeowner, tech savvy, works in a huge city, female, married, not many in family, into healthy eating, not thrifty, grocery delivery users and foodies, mostly in 30-50's.
 
-2. I would use above data to define active subscription cohort and target them by offering a loyalty/VIP program to build trust in brand and longevity with Tovala that would provide insight into deals, first offerings of new products coming down the pipe or even ability to craft their
-own menu with a Tovala chef and see it go live on an Instagram broadcast in real time to build social presence and stickiness to brand.
+2. I would use above data to define active subscription cohort and target them by offering a loyalty/VIP program to build trust in brand and longevity with Tovala that would provide insight into deals, first offerings of new products coming down the pipe or even ability to craft their own menu with a Tovala chef and see it go live on an Instagram broadcast in real time to build social presence and stickiness to brand.
 
-For those that are skipping, I would look into the customer support desk data and look at the top most common issues, such as delivery quality and address them quickly (especially for brand new Tovala users since have short window of time to impress). Switch third party vendors for delivery and if an oven is not meeting SLA 
-then immmediately send a replacement because with new companies, reputation is still being built. So quickly remedying issue is key for business' success.
+For those that are skipping, I would look into the customer support desk data and look at the top most common issues, such as delivery quality and address them quickly (especially for brand new Tovala users since have short window of time to impress). Switch third party vendors for delivery and if an oven is not meeting SLA then immmediately send a replacement because with new companies, reputation is still being built. So quickly remedying issue is key for business' success.
 
 3. Last, but not least: really monitor orders per tenure, consecutive skips closely to alarm Tovala customer success team if users are likely to churn or not and actively re-engage them by giving freebies/vouchers, meal/oven discounts to keep them engaged.
 
