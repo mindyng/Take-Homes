@@ -9,4 +9,4 @@ Good references (ranked from top to bottom- best to least):
 * [Help 5](https://github.com/AugmentedMode/Lyft-Data-Challenge/tree/master)
 
 Also, here is link to Mode environment:
-[Mode](https://app.mode.com/editor/mindy_ng/reports/177ab86e9669/queries/76ed4aa76f66)
+[BI tool](https://app.mode.com/editor/mindy_ng/reports/177ab86e9669/queries/76ed4aa76f66)
