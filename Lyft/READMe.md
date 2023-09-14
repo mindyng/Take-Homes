@@ -6,3 +6,4 @@ Good references (ranked from top to bottom- best to least):
 * [Help 2](https://github.com/bew030/lyft-challenge/tree/master)
 * [Help 3](https://github.com/bew030/lyft-challenge/blob/master/work%20notebooks/Jon-Workspace.ipynb)
 * [Help 4](https://github.com/anshul1004/LyftDataChallenge/blob/master/cizos_Writeup_AK_AP.pdf)
+* [Help 5](https://github.com/AugmentedMode/Lyft-Data-Challenge/tree/master)
