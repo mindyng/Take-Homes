@@ -1,1 +1,8 @@
 ride_timestamps.csv too big to add here, but Kaggle has it stored.
+
+Good references (ranked from top to bottom- best to least):
+
+* [Help 1](https://github.com/wjensheng/lyft/blob/master/IdealSpeculation_Writeup_JW_ZG.ipynb)
+* [Help 2](https://github.com/bew030/lyft-challenge/tree/master)
+* [Help 3](https://github.com/bew030/lyft-challenge/blob/master/work%20notebooks/Jon-Workspace.ipynb)
+* [Help 4](https://github.com/anshul1004/LyftDataChallenge/blob/master/cizos_Writeup_AK_AP.pdf)
