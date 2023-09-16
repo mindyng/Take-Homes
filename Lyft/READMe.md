@@ -10,3 +10,5 @@ Good references (ranked from top to bottom- best to least):
 
 Also, here is link to Mode environment:
 [BI tool](https://app.mode.com/editor/mindy_ng/reports/177ab86e9669/queries/76ed4aa76f66)
+
+[Analysis using Kaggle Python Notebooks](https://www.kaggle.com/code/mindyng/lyft-ba-assignment)
